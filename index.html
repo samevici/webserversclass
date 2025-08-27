@@ -20,10 +20,40 @@
             <h2>Cat family members</h2>
                 <ul> <a href="kasha.html">Kasha</a> </ul>
         </div>
-        <div>
+    <div>
             <h2>What is your dream cat?</h2>
-                <p> Adoption is a great way to help a cat that lived a rough life on the streets.</p>
+                <p> Adoption is a great way to help a cat that lived a rough life on the streets. please fill out this form to be matched with a dream cat</p>
+            <form> 
+                <label for="fname">First name (only letters, 20 char max):</label><br>
+                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{20}" required><br>
+                <label for="lname">Last name (only letters, 20 char max):</label><br>
+                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{20}" required> 
 
+                <p>What age of cat are you looking to adopt?</p>
+                <input type="radio" id="kitten" name="age" value="kitten">
+                <label for="kitten">0-1 years (kitten) </label><br>
+                <input type="radio" id="teen" name="age" value="teen">
+                <label for="teen">1-2 years (adolescent) </label><br>
+                <input type="radio" id="adult" name="age" value="adult">
+                <label for="adult">2-10 years (adult)</label><br>
+                <input type="radio" id="senior" name="age" value="senior">
+                <label for="senior">10+ years (senior)</label><br>
+
+                <p>Click to meow</p>
+                <input type="button" onclick="alert('Meow!')" value="Click Me!">
+
+                <br>    
+                <br>
+                <p>Submit form:</p>
+                <input type="submit">
+
+                <br>
+                <br>
+                <textarea name="message" rows="10" cols="30"> Thank you for helping a kitty out :) 
+                </textarea>
+
+            </form>        
         </div>
     </body>
+
 </html>
