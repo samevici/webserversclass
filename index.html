@@ -2,6 +2,36 @@
 <html>
     <head>
         <title>Cats of my life</title>
+        <script> 
+            function funFact() {
+                document.getElementById("funfact").innerHTML= 
+                "Only 1 in 3000 male cats can be calico. This is because an X chromosome can carry only one fur colour. Male calico cats are in fact intersex.";
+            }
+            function funFact2(elem) {
+                elem.innerHTML="Inversely, only about 20% of female cats are orange, because both Xs need to carry orange for a female cat to be fully orange";
+            }
+
+            function removeFosters() {
+                var x = document.getElementById("fosters");
+                    if (x.style.display === "none") {
+                         x.style.display = "block";
+                        }  else {
+                             x.style.display = "none";
+                         }
+            } 
+            function reqField() {
+              let x = document.forms["adoption"]["catexp"].value;
+                if (x == "") {
+                    document.getElementById("validate").innerHTML="This field is required!" 
+                 return false;
+                }
+                if (x != "") {
+                    document.getElementById("validate").innerHTML="" 
+                 return;
+                }
+            } 
+        </script>
+
     </head>
     <body>
         <div>
@@ -10,7 +40,21 @@
             <h2> What is a cat?</h2>
                     <p> The <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">domestic cat</a> is the only domesticated feline, with its domestication occurring around 7500 BC </p>
         </div>
-        <div>
+        
+        <div> 
+            <h2>Fun Fact button</h2>
+            <input type="button" onclick="funFact()" value="Click for a fun fact">
+            <p id="funfact">You do not have fun facts in your posession currently</p>
+        </div>
+
+        <div id="2_1_6">
+            <h3>This is another fun fact!</h3>
+            <button id="funfact2"  onclick="funFact2(this)">Fun fact 2 will appear on button</button>
+            <p></p>
+        </div>
+
+        <button onclick="removeFosters()">Hide fosters</button>
+        <div id="fosters">
             <h2>Foster Cats</h2>
                 <ul> <a href="juniper.html">Juniper</a> </ul>
                 <ul> <a href="maly.html">Maly</a> </ul>
@@ -23,7 +67,7 @@
     <div>
             <h2>What is your dream cat?</h2>
                 <p> Adoption is a great way to help a cat that lived a rough life on the streets. please fill out this form to be matched with a dream cat</p>
-            <form> 
+            <form id="adoption"> 
                 <label for="fname">First name (only letters, 20 char max):</label><br>
                 <input type="text" id="fname" name="fname" pattern="[A-Za-z]{20}" required><br>
                 <label for="lname">Last name (only letters, 20 char max):</label><br>
@@ -38,6 +82,11 @@
                 <label for="adult">2-10 years (adult)</label><br>
                 <input type="radio" id="senior" name="age" value="senior">
                 <label for="senior">10+ years (senior)</label><br>
+
+                <p>Have you taken care of a cat before?</p>
+                <label for="catexp">Please enter your response:</label><br>
+                <input type="text" id="catexp" name="catexp" onblur="reqField()" required>
+                <p id="validate" style="color:crimson;"></p>
 
                 <p>Click to meow</p>
                 <input type="button" onclick="alert('Meow!')" value="Click Me!">
@@ -54,6 +103,8 @@
 
             </form>        
         </div>
+
+     
     </body>
 
 </html>

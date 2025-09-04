@@ -8,11 +8,19 @@
                 height: 50%;
                 }
         </style>
+        <script>
+            function changeImage() {
+                 document.getElementById("juniper").src = "juni2.jpg"; 
+            }
+        </script>
     </head>
     <body>
-        <p> Juniper was my first foster cat. She was there for me when I was suffering fromchronic illness flareup. 
-            she is the most cuddly girl and everyone who babysat her when I was hospitalized loved her
+        <p> Juniper was my first foster cat. She was there for me when I was suffering from chronic illness flareup. 
+            She is the most cuddly girl and everyone who babysat her when I was hospitalized loved her
             She is now happily adopted </p>
-        <img src="juni1.jpg"/>
+
+        <button onclick="changeImage()">Change image!</button>
+        <br>
+        <img id="juniper" src="juni1.jpg"/>
     </body>
 </html>
