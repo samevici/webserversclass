@@ -30,6 +30,11 @@
                  return;
                 }
             } 
+            async function getText(file) {
+                let myObject = await fetch(file);
+                let myText = await myObject.text();
+                document.getElementById("duet").innerHTML = myText;
+            }
         </script>
 
     </head>
@@ -40,6 +45,7 @@
             <h2> What is a cat?</h2>
                     <p> The <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">domestic cat</a> is the only domesticated feline, with its domestication occurring around 7500 BC </p>
         </div>
+
         
         <div> 
             <h2>Fun Fact button</h2>
@@ -51,6 +57,12 @@
             <h3>This is another fun fact!</h3>
             <button id="funfact2"  onclick="funFact2(this)">Fun fact 2 will appear on button</button>
             <p></p>
+        </div>
+
+        <div id="lab3"> 
+            <h2>time to get musical</h2>
+            <button onclick="getText('cat_duet_lyrics.txt')">Click for the lyrics to Cat Duet (1825) </button>
+            <p id="duet">This opera is falsely attributed to Rossini</p>
         </div>
 
         <button onclick="removeFosters()">Hide fosters</button>
