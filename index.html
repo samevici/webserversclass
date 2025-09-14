@@ -5,7 +5,7 @@
         <script> 
             function funFact() {
                 document.getElementById("funfact").innerHTML= 
-                "Only 1 in 3000 male cats can be calico. This is because an X chromosome can carry only one fur colour. Male calico cats are in fact intersex.";
+                "Only 1 in 3000 male cats are calico. This is because an X chromosome can carry only one fur colour. Male calico cats are in fact intersex.";
             }
             function funFact2(elem) {
                 elem.innerHTML="Inversely, only about 20% of female cats are orange, because both Xs need to carry orange for a female cat to be fully orange";
@@ -42,6 +42,10 @@
         <div>
             <h1>Meet the cats in my life </h1>
                 <p>Cats are wonderful creatures</p>
+            <p>Click to meow</p>
+                <input type="button" onclick="alert('Meow!')" value="Click Me!">
+            <br>
+        
             <h2> What is a cat?</h2>
                     <p> The <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">domestic cat</a> is the only domesticated feline, with its domestication occurring around 7500 BC </p>
         </div>
@@ -56,14 +60,18 @@
         <div id="2_1_6">
             <h3>This is another fun fact!</h3>
             <button id="funfact2"  onclick="funFact2(this)">Fun fact 2 will appear on button</button>
-            <p></p>
+            <br>
+            <br>
         </div>
 
         <div id="lab3"> 
             <h2>time to get musical</h2>
             <button onclick="getText('cat_duet_lyrics.txt')">Click for the lyrics to Cat Duet (1825) </button>
             <p id="duet">This opera is falsely attributed to Rossini</p>
+            <br>
+            <br>
         </div>
+        
 
         <button onclick="removeFosters()">Hide fosters</button>
         <div id="fosters">
@@ -75,6 +83,7 @@
         <div>
             <h2>Cat family members</h2>
                 <ul> <a href="kasha.html">Kasha</a> </ul>
+            <br>
         </div>
     <div>
             <h2>What is your dream cat?</h2>
@@ -100,14 +109,9 @@
                 <input type="text" id="catexp" name="catexp" onblur="reqField()" required>
                 <p id="validate" style="color:crimson;"></p>
 
-                <p>Click to meow</p>
-                <input type="button" onclick="alert('Meow!')" value="Click Me!">
-
-                <br>    
                 <br>
                 <p>Submit form:</p>
                 <input type="submit">
-
                 <br>
                 <br>
                 <textarea name="message" rows="10" cols="30"> Thank you for helping a kitty out :) 
