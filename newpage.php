@@ -5,5 +5,5 @@
 
 <body> 
     <h1> PHP dump! </h1>
-    <p><?= var_dump($_SERVER) ?></p>
+    <p><?= $_SERVER[‘HTTP_USER_AGENT’]; ?></p>
 </body>
