@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Apply to adopt cat</title>
+    </head>
+    <body> 
+         <div>
+            <h1>Apply to adopt a cat today</h1>
+            <p> Adoption is a great way to help a cat that lived a rough life on the streets. </p>
+            <p> Please fill out the form to apply and we will contact you for an interview to make sure you are a perfect match with your cat </p>
+
+            <form action="newpage.php" method="post" id="adoption"> 
+                <label for="fname">First name (only letters, 20 char max):</label><br>
+                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{2-20}" required><br>
+                <label for="lname">Last name (only letters, 20 char max):</label><br>
+                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{2-20}" required> 
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" required> 
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required> 
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" required>
+                <label for="country">Country:</label><br>
+                <input type="text" id="country" name="country" required> 
+                <label for="pcode">Postal Code:</label><br>
+                <input type="text" id="pcode" name="pcode" required>   
+                <label for="phone">Phone number:</label><br>
+                <input type="text" id="phone" name="phone" required>
+                <label for="cat_name">Cat name you want to adopt:</label><br>
+                <input type="text" id="cat_name" name="cat_name" required>   
+                <label for="prior_catexp">Cat name you want to adopt:</label><br>
+                <input type="text" id="prior_catexp" name="prior_catexp" required>
+                <label for="adopt_reason">What pushed you to adopt:</label><br>
+                <input type="text" id="adopt_reason" name="adopt_reason" required>   
+
+
+                <br>
+                <p>Submit form:</p>
+                <input type="submit">
+                <br>
+                <br>
+                <textarea name="message" rows="10" cols="30"> Thank you for helping a kitty out :) 
+                </textarea>
+
+            </form>        
+        </div>
+
+    </body>
+
+
+
+</html>
