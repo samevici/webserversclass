@@ -2,6 +2,19 @@
 <html>
     <head>
         <title>Apply to adopt cat</title>
+            <script> 
+             function reqField(field,par) {
+                  let x = document.forms["adoption"][field].value;
+                    if (x == "") {
+                        document.getElementById(par).innerHTML="This field is required!" 
+                        return false;
+                    }
+                    if (x != "") {
+                        document.getElementById(par).innerHTML="" 
+                        return;
+                     }
+                } 
+            </script>
     </head>
     <body> 
          <div>
@@ -9,29 +22,73 @@
             <p> Adoption is a great way to help a cat that lived a rough life on the streets. </p>
             <p> Please fill out the form to apply and we will contact you for an interview to make sure you are a perfect match with your cat </p>
 
-            <form action="newpage.php" method="post" id="adoption"> 
-                <label for="fname">First name (only letters, 20 char max):</label><br>
-                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{2-20}" required><br>
-                <label for="lname">Last name (only letters, 20 char max):</label><br>
-                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{2-20}" required> 
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" required> 
-                <label for="address">Address:</label><br>
-                <input type="text" id="address" name="address" required> 
-                <label for="city">City:</label><br>
-                <input type="text" id="city" name="city" required>
-                <label for="country">Country:</label><br>
-                <input type="text" id="country" name="country" required> 
-                <label for="pcode">Postal Code:</label><br>
-                <input type="text" id="pcode" name="pcode" required>   
-                <label for="phone">Phone number:</label><br>
-                <input type="text" id="phone" name="phone" required>
-                <label for="cat_name">Cat name you want to adopt:</label><br>
-                <input type="text" id="cat_name" name="cat_name" required>   
-                <label for="prior_catexp">Cat name you want to adopt:</label><br>
-                <input type="text" id="prior_catexp" name="prior_catexp" required>
-                <label for="adopt_reason">What pushed you to adopt:</label><br>
-                <input type="text" id="adopt_reason" name="adopt_reason" required>   
+            <form action="adoptapplication.php" method="post" id="adoption"> 
+
+                <label for="fname">First name (only letters, 20 char max):</label>
+                <br>
+                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{2-20}" onblur="reqField('fname','valname')" required>
+                <p id="valname" style="color:crimson;"></p>
+                <br>
+
+                <label for="lname">Last name (only letters, 20 char max):</label>
+                <br>
+                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{2-20}" onblur="reqField('lname','valsur')" required>
+                <p id="valsur" style="color:crimson;"></p>
+                <br>
+
+                <label for="email">Email:</label>
+                <br>
+                <input type="text" id="email" name="email" onblur="reqField('email','valmail')" required>
+                <p id="valmail" style="color:crimson;"></p>
+                <br>
+
+                <label for="address">Address:</label>
+                <br>
+                <input type="text" id="address" name="address" onblur="reqField('address','valadd')" required>
+                <p id="valadd" style="color:crimson;"></p>
+                <br>
+
+                <label for="city">City:</label>
+                <br>
+                <input type="text" id="city" name="city" onblur="reqField('city','valcity')" required>
+                <p id="valcity" style="color:crimson;"></p>
+                <br>
+
+                <label for="country">Country:</label>
+                <br>
+                <input type="text" id="country" name="country" onblur="reqField('country','valcountry')" required>
+                <p id="valcountry" style="color:crimson;"></p>
+                <br>
+
+                <label for="pcode">Postal Code:</label>
+                <br>
+                <input type="text" id="pcode" name="pcode" onblur="reqField('pcode','valpcode')" required>
+                <p id="valpcode" style="color:crimson;"></p>
+                <br>
+
+                <label for="phone">Phone number:</label>
+                <br>
+                <input type="text" id="phone" name="phone" onblur="reqField('phone','valphone')" required>
+                <p id="valphone" style="color:crimson;"></p>
+                <br>
+
+                <label for="cat_name">Name of cat you want to adopt:</label>
+                <br>
+                <input type="text" id="cat_name" name="cat_name" onblur="reqField('cat_name','valcat')" required>
+                <p id="valcat" style="color:crimson;"></p>
+                <br>
+
+                <label for="prior_catexp">Cat name you want to adopt:</label>
+                <br>
+                <input type="text" id="prior_catexp" name="prior_catexp" onblur="reqField('prior_catexp','valexp')" required>
+                <p id="valexp" style="color:crimson;"></p>
+                <br>
+
+                <label for="adopt_reason">What pushed you to adopt?</label>
+                <br>
+                <input type="text" id="adopt_reason" name="adopt_reason" onblur="reqField('adopt_reason','valreason')" required>
+                <p id="valreason" style="color:crimson;"></p>
+                <br><br>   
 
 
                 <br>
@@ -39,14 +96,9 @@
                 <input type="submit">
                 <br>
                 <br>
-                <textarea name="message" rows="10" cols="30"> Thank you for helping a kitty out :) 
-                </textarea>
-
             </form>        
         </div>
 
     </body>
-
-
 
 </html>

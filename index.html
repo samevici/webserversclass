@@ -1,126 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cats of my life</title>
-        <script> 
-            function funFact() {
-                document.getElementById("funfact").innerHTML= 
-                "Only 1 in 3000 male cats are calico. This is because an X chromosome can carry only one fur colour. Male calico cats are in fact intersex.";
+        <title>Welcome to our cat rescue!</title>
+        <style> 
+
+            table, th, td {
+                border-spacing: 5px;
             }
-            function funFact2(elem) {
-                elem.innerHTML="Inversely, only about 20% of female cats are orange, because both Xs need to carry orange for a female cat to be fully orange";
+            
+            th, td {
+                background-color: #83b2ef;
+                border-radius: 10px;
+                text-align: center;
             }
 
-            function removeFosters() {
-                var x = document.getElementById("fosters");
-                    if (x.style.display === "none") {
-                         x.style.display = "block";
-                        }  else {
-                             x.style.display = "none";
-                         }
-            } 
-            function reqField() {
-              let x = document.forms["adoption"]["catexp"].value;
-                if (x == "") {
-                    document.getElementById("validate").innerHTML="This field is required!" 
-                 return false;
-                }
-                if (x != "") {
-                    document.getElementById("validate").innerHTML="" 
-                 return;
-                }
-            } 
-            async function getText(file) {
-                let myObject = await fetch(file);
-                let myText = await myObject.text();
-                document.getElementById("duet").innerHTML = myText;
+            td:hover 
+                {background-color: #D6EEEE;}
+                
+            img {
+                width: 65%;
+                height: 65%;
             }
-        </script>
 
+        </style>
     </head>
+
     <body>
         <div>
-            <h1>Meet the cats in my life </h1>
-                <p>Cats are wonderful creatures</p>
-            <p>Click to meow</p>
-                <input type="button" onclick="alert('Meow!')" value="Click Me!">
-            <br>
-        
-            <h2> What is a cat?</h2>
-                    <p> The <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">domestic cat</a> is the only domesticated feline, with its domestication occurring around 7500 BC </p>
-        </div>
-
-        
-        <div> 
-            <h2>Fun Fact button</h2>
-            <input type="button" onclick="funFact()" value="Click for a fun fact">
-            <p id="funfact">You do not have fun facts in your posession currently</p>
-        </div>
-
-        <div id="2_1_6">
-            <h3>This is another fun fact!</h3>
-            <button id="funfact2"  onclick="funFact2(this)">Fun fact 2 will appear on button</button>
-            <br>
-            <br>
-        </div>
-
-        <div id="lab3"> 
-            <h2>time to get musical</h2>
-            <button onclick="getText('cat_duet_lyrics.txt')">Click for the lyrics to Cat Duet (1825) </button>
-            <p id="duet">This opera is falsely attributed to Rossini</p>
-            <br>
-            <br>
-        </div>
-        
-
-        <button onclick="removeFosters()">Hide fosters</button>
-        <div id="fosters">
-            <h2>Foster Cats</h2>
-                <ul> <a href="juniper.html">Juniper</a> </ul>
-                <ul> <a href="maly.html">Maly</a> </ul>
-                <ul> <a href="chanterelle.html">Chanterelle</a> </ul>
-        </div>
-        <div>
-            <h2>Cat family members</h2>
-                <ul> <a href="kasha.html">Kasha</a> </ul>
-            <br>
-        </div>
-    <div>
-            <h2>What is your dream cat?</h2>
-                <p> Adoption is a great way to help a cat that lived a rough life on the streets. please fill out this form to be matched with a dream cat</p>
-            <form action="newpage.php" method="post" id="adoption"> 
-                <label for="fname">First name (only letters, 20 char max):</label><br>
-                <input type="text" id="fname" name="fname" pattern="[A-Za-z]{2-20}" required><br>
-                <label for="lname">Last name (only letters, 20 char max):</label><br>
-                <input type="text" id="lname" name="lname" pattern="[A-Za-z]{2-20}" required> 
-
-                <p>What age of cat are you looking to adopt?</p>
-                <input type="radio" id="kitten" name="age" value="kitten">
-                <label for="kitten">0-1 years (kitten) </label><br>
-                <input type="radio" id="teen" name="age" value="teen">
-                <label for="teen">1-2 years (adolescent) </label><br>
-                <input type="radio" id="adult" name="age" value="adult">
-                <label for="adult">2-10 years (adult)</label><br>
-                <input type="radio" id="senior" name="age" value="senior">
-                <label for="senior">10+ years (senior)</label><br>
-
-                <p>Have you taken care of a cat before?</p>
-                <label for="catexp">Please enter your response:</label><br>
-                <input type="text" id="catexp" name="catexp" onblur="reqField()" required>
-                <p id="validate" style="color:crimson;"></p>
-
-                <br>
-                <p>Submit form:</p>
-                <input type="submit">
+            <h1>Welcome to Affo-gato cat rescue!</h1>
+                <p>We are a humble cat rescue that works with a network of foster families.</p>
+                <p>We focus on cats with behaviour issues who would normally have a hard time getting adopted -- or worse, would otherwise get euthanized.</p>
+                <p>All of our cats are microchipped, sterilized, and vaccinated. There will be a small adoption cost to help  us cover the medical fees and keep the mission going</p>
+                <p>To get to know the cats available for adoption, please browse the section below</p>
+                <p>Once you feel a special connection with one of our cats, please fill <a href="adoptionform.html">this adoption request form</a> </p>
                 <br>
                 <br>
-                <textarea name="message" rows="10" cols="30"> Thank you for helping a kitty out :) 
-                </textarea>
-
-            </form>        
         </div>
 
-     
+        <div id="foradoption">
+            <table style="width:50%">
+                <tr style="height:30px">
+                    <th colspan="2">PETS AVAILABLE FOR ADOPTION</th>
+                </tr>
+
+
+                <tr style="height:400px">
+                    <td>
+                        <p></p>
+                        <img id="juniper" src="images/juni2.jpg"/>
+                        <ul><b><a href="juniper.html">Juniper</a></b></ul>
+                    </td>
+                    <td>
+                        <p></p>
+                        <img id="maly" src="images/maly2.jpg"/>
+                        <ul><b><a href="maly.html">Maly</a></b></ul>
+                    </td>
+                </tr>
+            
+                <tr style="height:400px">
+                    <td>
+                        <p></p>
+                        <img id="chanterelle" src="images/chanterelle2.jpg"/>
+                        <ul><b><a href="chanterelle.html">Chanterelle</a></b></ul>
+                    </td>
+                    <td> 
+                        <p></p>
+                        <img id="chanterelle" src="images/kasha2.jpg"/>
+                        <ul><b><a href="kasha.html">Kasha</a></b></ul>
+                    </td>
+                </tr>
+
+            </table> 
+        </div>
+   
     </body>
 
 </html>
+
+
