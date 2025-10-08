@@ -14,7 +14,6 @@
                     die("Connection failed: {mysqli_connect_error()}");
                 }
 
-
                 $keys = [];
                 $resp = [];
 
@@ -25,12 +24,7 @@
                 foreach ($_POST as $x =>$y) {
                     $resp[] = htmlspecialchars("{$y}");
                     };
-                
-                
-
-                 foreach ($resp as $y) {
-                    $row = {$row} . ',' . {$x};
-                };  
+            
 
                 $sql = "INSERT INTO adoption_form (" .implode("," , $keys) . ") VALUES ('" . implode("','" , $resp) . "');";
                 $result = mysqli_query($conn, $sql);
