@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Server PHP test page</title>
        <?php
 
-                $server = "http://raspivictor.local:8080";
+                $server = "localhost";
                 $username = "php";
                 $password = "victorphpass";
                 $database = "cat_adoptions";
@@ -45,7 +46,5 @@
             ";
         mysqli_close($conn);
 ?>
-
-     
-
 </body>
+</html>
