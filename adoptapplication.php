@@ -36,7 +36,7 @@
     <h1> Application receipt </h1>
         <?php    
             $sql = "select * from adoption_form;";
-            $num = mysqli_num_rows($conn, $sql);
+            $num = mysqli_num_rows($sql);
             $sql = "select * from adoption_form where id=$num;";
             $result = mysqli_query($conn, $sql);
 
