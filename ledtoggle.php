@@ -9,9 +9,9 @@
         xmlHttp.open( "GET", 'ledexec.php', true); 
         xmlHttp.send( null );
         const result = JSON.parse(xmlHttp.responseText);
-        document.getElementById("temp").innerHTML = obj.temperature;
-        document.getElementById("alt").innerHTML = obj.altitude;  
-        document.getElementById("press").innerHTML = obj.pressure; 
+        document.getElementById("temp").innerHTML = result.temperature;
+        document.getElementById("alt").innerHTML = result.altitude;  
+        document.getElementById("press").innerHTML = result.pressure; 
 
     }
 
@@ -22,9 +22,9 @@
 <body>
 
 <button type="button" onclick="myFunction()">Click to toggle</button>
-<p id="temp"> 0.00</p>
-<p id ="alt"> 0.00</p>
-<p id = "press"> 0.00</p> 
+Temperature: <p id="temp"> 0.00</p>
+Altitude: <p id ="alt"> 0.00</p>
+Pressure: <p id = "press"> 0.00</p> 
 
 </body>
 </html>
