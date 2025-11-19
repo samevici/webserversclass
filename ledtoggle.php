@@ -4,12 +4,12 @@
 <title>led toggle page</title>
 
 <script>
-    function myFunction() {
-    <?php
-      $output = shell_exec('gpio toggle 15');
-     ?>
+    async function myFunction() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", 'ledexec.php', true); // false for synchronous request
+        xmlHttp.send( null );
     }
-    
+
 </script>
 
 </head>
