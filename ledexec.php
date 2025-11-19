@@ -3,6 +3,6 @@
 <head>
 </head>
 <?php
-   $output = shell_exec("gpio toggle 15");
+$raw = `./bme280`;
 ?>
 </html>
