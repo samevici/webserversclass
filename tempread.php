@@ -6,9 +6,9 @@
 <script>
     async function myFunction() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", 'ledexec.php', true); 
+        xmlHttp.open( "GET", 'tempexec.php', true); 
         xmlHttp.send( null );
-        const result = JSON.parse(xmlHttp.responseText);
+        var result = JSON.parse(xmlHttp.responseText);
         document.getElementById("temp").innerHTML = result.temperature;
         document.getElementById("alt").innerHTML = result.altitude;  
         document.getElementById("press").innerHTML = result.pressure; 
@@ -21,10 +21,10 @@
 
 <body>
 
-<button type="button" onclick="myFunction()">Click to toggle</button>
-Temperature: <p id="temp"> 0.00</p>
-Altitude: <p id ="alt"> 0.00</p>
-Pressure: <p id = "press"> 0.00</p> 
+<button type="button" onclick="myFunction()">Click to read</button>
+<b>Temperature:</b> <p id="temp"> 0.00</p>
+<b>Altitude:</b> <p id ="alt"> 0.00</p>
+<b>Pressure:</b> <p id = "press"> 0.00</p> 
 
 </body>
 </html>
