@@ -6,8 +6,8 @@
 <script>
     async function myFunction() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", 'tempexec.php', true); 
-        xmlHttp.send( null );
+        xmlHttp.open( "GET", 'tempexec.php', false); 
+        xmlHttp.send();
         const result =JSON.parse(xmlHttp.responseText);
 
         document.getElementById("temp").innerHTML = result.temperature;
