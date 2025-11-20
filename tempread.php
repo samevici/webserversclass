@@ -8,8 +8,7 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", 'tempexec.php', true); 
         xmlHttp.send( null );
-        const rawResult = JSON.rawJSON(xmlHttp.responseText);
-        const result =JSON.parse(rawResult);
+        const result =JSON.parse(xmlHttp.responseText);
 
         document.getElementById("temp").innerHTML = result.temperature;
         document.getElementById("alt").innerHTML = result.altitude;  
