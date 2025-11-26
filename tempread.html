@@ -14,22 +14,24 @@
         document.getElementById("alt").innerHTML = result.altitude;  
         document.getElementById("press").innerHTML = result.pressure; 
     }
-  
 
 </script>
 </head>
 
 <body>
 
-  <script> while (1) {
-    setTimeout(myFunction, 1000);
-   }
-  </script>
+  
 
 <br>
 <b>Temperature:</b> <p id="temp"> 0.00</p>
 <b>Altitude:</b> <p id ="alt"> 0.00</p>
 <b>Pressure:</b> <p id = "press"> 0.00</p> 
+
+<script>
+  while (1) {
+    setInterval(myFunction, 1000);
+   }
+</script>
 
 </body>
 </html>
