@@ -15,8 +15,7 @@
         document.getElementById("alt").innerHTML = result.altitude;  
         document.getElementById("press").innerHTML = result.pressure;
         
-         setTimeout(function(){
-            window.location.reload(1);}, 1000);
+        
 
     }
 
@@ -29,7 +28,10 @@
 <b>Temperature:</b> <p id="temp"> 0.00</p>
 <b>Altitude:</b> <p id ="alt"> 0.00</p>
 <b>Pressure:</b> <p id = "press"> 0.00</p> 
-<p onload="myfunction()"></p>
+
+<script>myFunction();
+ setInterval(myFunction , 1000);
+</script>
 
 
 </body>
