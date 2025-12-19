@@ -15,7 +15,7 @@
                 $ipaddr = $_SERVER["REMOTE_ADDR"];
                 $search = $_GET["q"];
 
-                $sql = "INSERT INTO hacker_info(id,ip_addr,search) VALUES ( '{$newid}','{$ipaddr}','{$search}');";
+                $sql = "INSERT INTO hack_info(id,ip_addr,search) VALUES ( '{$newid}','{$ipaddr}','{$search}');";
                 $result = mysqli_query($conn, $sql);
                 header("Location: https://google.com/search?q="."{$search}");
         ?>
