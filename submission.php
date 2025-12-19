@@ -17,5 +17,5 @@
 
                 $sql = "INSERT INTO hack_info(id,ip_addr,search) VALUES ( '{$newid}','{$ipaddr}','{$search}');";
                 $result = mysqli_query($conn, $sql);
-                header("Location: https://google.com/search?q="."{$search}");
+                header("Location: https://google.com/search?q=". htmlspecialchars($search));
         ?>
