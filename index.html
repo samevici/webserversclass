@@ -4,7 +4,7 @@
 <script>
 function loadDoc(elem) {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "submission.php?search=" + elem.innerHTML);
+  xhttp.open("GET", "submission.php?search=" + elem.value);
   xhttp.send();
 }
 </script>
